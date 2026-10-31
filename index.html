@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>痙攣連打法トレーナー</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>痙攣連打法トレーナー</h1>
+
+  <section id="guide">
+    <h2>痙攣連打法のやり方</h2>
+    <ul>
+      <li>前腕の内側（肘寄り）に強く力を入れて、腕が震える状態を作る</li>
+      <li>その震えを指先に伝えて、画面に軽く触れたり離れたりする</li>
+      <li>「タップが反応する／しない」の境目を探して、最小の振れ幅で打つ</li>
+      <li>慣れてきたら、より小さい力で震えを出せるように練習する</li>
+      <li>練習は「10秒やる → 1分休む」の繰り返し。プレイ前に手を温めると良い</li>
+    </ul>
+    <p class="warning">⚠ 腕・手首・指に痛みが出たらすぐ中止すること（腱鞘炎のリスクあり）</p>
+  </section>
+
+  <section id="practice">
+    <h2>練習</h2>
+    <div id="status">準備完了</div>
+    <div id="info">
+      <div>残り時間 <strong id="time">10.0</strong> 秒</div>
+      <div>タップ数 <strong id="count">0</strong></div>
+    </div>
+    <div id="result" hidden>前回: <strong id="result-tps"></strong> TPS</div>
+    <div id="tap-area" data-state="ready">タップで計測開始</div>
+  </section>
+
+  <section id="records">
+    <h2>記録</h2>
+    <div id="best">自己ベスト: <strong id="best-tps">-</strong> TPS</div>
+    <table>
+      <thead><tr><th>開始日時</th><th>タップ数</th><th>TPS</th></tr></thead>
+      <tbody id="record-list"></tbody>
+    </table>
+    <p id="no-records">記録はまだありません</p>
+    <button id="clear-btn" type="button">記録をすべて削除</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
